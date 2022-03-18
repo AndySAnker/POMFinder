@@ -12,8 +12,8 @@ setup(
     description='Finds POM clusters from PDF data!',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    py_modules=['POMFinder', 'POMFinder/Backend'],
-    packages=['POMFinder', 'POMFinder/Backend'],
+    py_modules=['POMFinder'],
+    packages=['POMFinder'],
 
     entry_points={'console_scripts': [
         'POMFinder=POMFinder.cli:main',
