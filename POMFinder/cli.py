@@ -47,6 +47,7 @@ def get_POMFinder():
     # Import the Database
     cwd = os.getcwd()
     load_files = pkg_resources.resource_listdir(__name__, 'Backend/')
+    print (__name__)
     print (load_files)
     
     hf_name = h5py.File(load_files+'/Backend/POMFinder_443structures_100Dataset_per_Structure_xPDF_hypercube_sampling_Grmax_Name.h5', "r")
