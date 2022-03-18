@@ -1,0 +1,5 @@
+xgboost==1.5.2
+numpy==1.21.5
+matplotlib==3.5.1
+sklearn
+h5py
