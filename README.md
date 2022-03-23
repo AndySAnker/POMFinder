@@ -8,8 +8,7 @@ Simply provide a PDF and the model will output best best structural models from 
 2. [Usage](#usage)
 3. [Authors](#authors)
 4. [Cite](#cite)
-5. [Acknowledgments](#acknowledgments)
-6. [License](#license)
+5. [License](#license)
 
 
 ## Install
