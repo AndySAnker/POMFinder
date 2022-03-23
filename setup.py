@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     py_modules=['POMFinder'],
     packages=['POMFinder'],
-    package_dir={'POMFinder': 'POMFinder/Backend/'},
+    package_dir={'POMFinder': 'POMFinder/'},
     package_data={'POMFinder': ['*.model', '*.h5', '*.xyz']},
 
     entry_points={'console_scripts': [
@@ -31,9 +31,9 @@ setup(
     zip_safe=False,
 
     install_requires=[
-        'xgboost==1.5.2',
-        'numpy==1.21.5',
-        'matplotlib==3.5.1',
+        'xgboost',
+        'numpy',
+        'matplotlib',
         'sklearn',
         'h5py'
     ],
