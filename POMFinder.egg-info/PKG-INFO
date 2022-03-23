@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: POMFinder
+Version: 1.0.0
+Summary: Finds POM clusters from PDF data!
+Home-page: https://github.com/AndyNano/POMFinder
+Author: Andy S. Anker
+Author-email: andy@chem.ku.dk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# POMFinder
+Welcome to POMFinder!
+This is a simple machine learning tool for structure characterisation of polyoxometalate clusters using total scattering Pair 
+Distribution Function (PDF) analysis.  
+Simply provide a PDF and the model will output best best structural models from it structure catalog which contains 443 polyoxometalate clusters. 
+
+1. [Install](#install)
+2. [Usage](#usage)
+3. [Authors](#authors)
+4. [Cite](#cite)
+5. [Acknowledgments](#acknowledgments)
+6. [License](#license)
+7. [Develop](#develop)
+
+## Install
+To install POMFindeer you will need to have [Python](https://www.python.org/downloads/) or 
+[Anaconda](https://www.anaconda.com/products/individual) installed. I recommend running POMFinder on Python version
+3.7 or higher. If you have installed Anaconda you can create a new environment and activate it. 
+```
+conda create --name POMFinder_env python=3.7
+conda activate POMFinder_env
+```
+Now you are ready to install what you actually come for! Currently __POMFinder__ is not avaible through PyPI or conda so the
+package needs to be downloaded manually
+Run the following command to install the __POMFindeer__ package.  
+```
+pip install .
+or
+python setup.py install
+```
+
+To verify that __POMFinder__ have been installed properly try calling the help argument.
+```
+POMFinder --help
+
+>>> usage: POMFinder [-h] -d DATA [-n NYQUIST] [-i QMIN] [-a QMAX] [-m QDAMP] [-f FILE_NAME]       
+>>> 
+>>> This is a package which takes a directory of PDF files 
+>>> or a specific PDF file. It then determines the best structural 
+>>> candidates based of a polyoxometalate catalog. Results can
+>>> be fitted to the PDF. 
+```  
+This should output a list of possible arguments for running __POMFinder__ and indicates that it could find the package! 
+
+## Usage
+Now that __POMFinder__ is installed and ready to use, lets discuss the possible arguments. The arguments are described in 
+greater detail at the end of this section.
+
+| Arg | Description | Default |  
+| --- | --- |  --- |  
+|  | __Required argument__ | | 
+| `-h` or `--help` | Prints help message. |    
+| `-n` or `--nyquist` | Is the data nyquist sampled. __bool__ | `-n True`
+| `-i` or `--Qmin` | Qmin value of the experimental PDF. __float__ | `-i 0.7` 
+| `-a` or `--Qmax` | Qmax value of the experimental PDF. __float__ | `-a 30` 
+| `-m` or `--Qdamp` | Qdamp value of the experimental PDF. __float__ | `-m 0.04`
+| `-f` or `--file_name` | Name of the output file. __str__ | `-o ''` 
+| `-d` or `--data` | A directory of PDFs or a specific PDF file. __str__ | `-d 5` 
+
+# Authors
+__Andy S. Anker__<sup>1</sup>   
+__Emil T. S. Kjær__<sup>1</sup>  
+__Kirsten M. Ø. Jensen__<sup>1</sup>    
+ 
+<sup>1</sup> Department of Chemistry and Nano-Science Center, University of Copenhagen, 2100 Copenhagen Ø, Denmark.   
+
+Should there be any question, desired improvement or bugs please contact us on GitHub or 
+through email: __andy@chem.ku.dk__.
+
+# Cite
+If you use our code or our results, please consider citing our paper. Thanks in advance!
+```
+```
+
+# License
+This project is licensed under the Apache License Version 2.0, January 2004 - see the [LICENSE](LICENSE) file for details.
+
+# Develop
+Instal in developer mode.
+```
+$ pip install -e .[dev]
+```
+Build wheel from source distribution.
+```
+python setup.py bdist_wheel
+```
+
+

@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     py_modules=['POMFinder'],
     packages=['POMFinder'],
-    package_dir={'POMFinder': 'POMFinder/'},
+    package_dir={'POMFinder': 'POMFinder'},
     package_data={'POMFinder': ['src/*.model', 'src/*.h5', 'src/COD_ICSD_XYZs_POMs_unique99/*.xyz']},
 
     entry_points={'console_scripts': [
