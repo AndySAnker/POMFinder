@@ -57,6 +57,16 @@ greater detail at the end of this section.
 | `-f` or `--file_name` | Name of the output file. __str__ | `-o ''` 
 | `-d` or `--data` | A directory of PDFs or a specific PDF file. __str__ | `-d 5` 
 
+For example
+```  
+POMFinder --data "Experimental_Data/DanMAX_AlphaKeggin.gr" --nyquist "no" --Qmin 0.7 --Qmax 20 --Qdamp 0.02
+>>> The 1st guess from the model is:  icsd_427457_1_0.9rscale.xyz with  83.29164981842041 % certaincy
+>>> The 2nd guess from the model is:  icsd_427379_0_0.9rscale.xyz with  13.973137736320496 % certaincy
+>>> The 3rd guess from the model is:  icsd_281447_0_1.0rscale.xyz with  1.488963421434164 % certaincy
+>>> The 4th guess from the model is:  icsd_423775_0_0.9rscale.xyz with  0.9325935505330563 % certaincy
+>>> The 5th guess from the model is:  icsd_172542_0_1.1rscale.xyz with  0.22610558662563562 % certaincy
+
+```  
 # Authors
 __Andy S. Anker__<sup>1</sup>   
 __Emil T. S. Kjær__<sup>1</sup>  
