@@ -15,7 +15,7 @@ setup(
     py_modules=['POMFinder'],
     packages=['POMFinder'],
     package_dir={'POMFinder': 'POMFinder/'},
-    package_data={'POMFinder': ['*.model', '*.h5', '*.xyz']},
+    package_data={'POMFinder': ['src/*.model', 'src/*.h5', 'src/COD_ICSD_XYZs_POMs_unique99/*.xyz']},
 
     entry_points={'console_scripts': [
         'POMFinder=POMFinder.cli:main',
