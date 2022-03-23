@@ -14,8 +14,8 @@ setup(
     long_description_content_type="text/markdown",
     py_modules=['POMFinder'],
     packages=['POMFinder'],
-    package_dir={'POMFinder': 'POMFinder/'},
-    package_data={'POMFinder': ['*.model', '*.h5']},
+    package_dir={'POMFinder': 'POMFinder/Backend/'},
+    package_data={'POMFinder': ['*.model', '*.h5', '*.xyz']},
 
     entry_points={'console_scripts': [
         'POMFinder=POMFinder.cli:main',
