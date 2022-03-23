@@ -2,7 +2,7 @@ from sklearn.preprocessing import OrdinalEncoder
 import xgboost as xgb
 import numpy as np
 import matplotlib.pyplot as plt
-import argparse, h5py, os, re, pkg_resources
+import argparse, h5py, os, re
 
 _BANNER = """
 This is a package which takes a directory of PDF files
@@ -44,13 +44,8 @@ def main(args=None):
 
 
 def get_POMFinder():
-    # Import the Database
-    cwd = os.getcwd()
-    load_files = pkg_resources.resource_listdir(__name__, '../src/')
-    print (__name__)
-    print (load_files)
-    
-    hf_name = h5py.File(load_files+'../src/POMFinder_443structures_100Dataset_per_Structure_xPDF_hypercube_sampling_Grmax_Name.h5', "r")
+    # Import the Database    
+    hf_name = h5py.File('src/Backend/POMFinder_443structures_100Dataset_per_Structure_xPDF_hypercube_sampling_Grmax_Name.h5', "r")
     y = hf_name.get('y')
     enc = OrdinalEncoder()
     y_onehotenc_cat = enc.fit(np.array(y))
@@ -58,25 +53,24 @@ def get_POMFinder():
 
     # Import XYZFinder
     POMFinder = xgb.XGBClassifier()
-    POMFinder.load_model(cwd+'../src/XGBoost_443structures_100PDFperStructure_xPDF_hypercube_sampling_Grmax.model')
+    POMFinder.load_model('src/Backend/XGBoost_443structures_100PDFperStructure_xPDF_hypercube_sampling_Grmax.model')
     return y, y_onehotenc_cat, y_onehotenc_values, POMFinder
 
 
 def PDF_Preparation(Your_PDF_Name, Qmin, Qmax, Qdamp, rmax=30, nyquist="No", plot=True):
-    cwd = os.getcwd()
     for i in range(1000):
-        with open(cwd+"/" + Your_PDF_Name, "r") as file:
+        with open("src/" + Your_PDF_Name, "r") as file:
             data = file.read().splitlines(True)
             if len(data[0]) == 0:
-                with open(cwd+"/" + Your_PDF_Name, 'w') as fout:
+                with open("src/" + Your_PDF_Name, 'w') as fout:
                     fout.writelines(data[1:])
                 break
             first_line = data[0]
             if len(first_line) > 3 and re.match(r'^-?\d+(?:\.\d+)?$', first_line[0]) != None and re.match(r'^-?\d+(?:\.\d+)?$', first_line[1]) == None and re.match(r'^-?\d+(?:\.\d+)?$', first_line[2]) != None:
-                PDF = np.loadtxt(cwd+"/" + Your_PDF_Name)
+                PDF = np.loadtxt("src/" + Your_PDF_Name)
                 break
             else:
-                with open(cwd+"/" + Your_PDF_Name, 'w') as fout:
+                with open("src/" + Your_PDF_Name, 'w') as fout:
                     fout.writelines(data[1:])
         
     #PDF = np.loadtxt("Experimental_Data/" + Your_PDF_Name)
