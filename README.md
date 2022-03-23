@@ -10,7 +10,7 @@ Simply provide a PDF and the model will output best best structural models from 
 4. [Cite](#cite)
 5. [Acknowledgments](#acknowledgments)
 6. [License](#license)
-7. [Develop](#develop)
+
 
 ## Install
 To install POMFindeer you will need to have [Python](https://www.python.org/downloads/) or 
@@ -60,6 +60,7 @@ greater detail at the end of this section.
 For example
 ```  
 POMFinder --data "Experimental_Data/DanMAX_AlphaKeggin.gr" --nyquist "no" --Qmin 0.7 --Qmax 20 --Qdamp 0.02
+
 >>> The 1st guess from the model is:  icsd_427457_1_0.9rscale.xyz with  83.29164981842041 % certaincy
 >>> The 2nd guess from the model is:  icsd_427379_0_0.9rscale.xyz with  13.973137736320496 % certaincy
 >>> The 3rd guess from the model is:  icsd_281447_0_1.0rscale.xyz with  1.488963421434164 % certaincy
@@ -84,13 +85,3 @@ If you use our code or our results, please consider citing our paper. Thanks in 
 
 # License
 This project is licensed under the Apache License Version 2.0, January 2004 - see the [LICENSE](LICENSE) file for details.
-
-# Develop
-Instal in developer mode.
-```
-$ pip install -e .[dev]
-```
-Build wheel from source distribution.
-```
-python setup.py bdist_wheel
-```
