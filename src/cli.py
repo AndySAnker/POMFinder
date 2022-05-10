@@ -58,18 +58,18 @@ def get_POMFinder():
 
 def PDF_Preparation(Your_PDF_Name, Qmin, Qmax, Qdamp, rmax, nyquist, plot=True):
     for i in range(1000):
-        with open("src/" + Your_PDF_Name, "r") as file:
+        with open(Your_PDF_Name, "r") as file:
             data = file.read().splitlines(True)
             if len(data[0]) == 0:
-                with open("src/" + Your_PDF_Name, 'w') as fout:
+                with open(Your_PDF_Name, 'w') as fout:
                     fout.writelines(data[1:])
                 break
             first_line = data[0]
             if len(first_line) > 3 and re.match(r'^-?\d+(?:\.\d+)?$', first_line[0]) != None and re.match(r'^-?\d+(?:\.\d+)?$', first_line[1]) == None and re.match(r'^-?\d+(?:\.\d+)?$', first_line[2]) != None:
-                PDF = np.loadtxt("src/" + Your_PDF_Name)
+                PDF = np.loadtxt(Your_PDF_Name)
                 break
             else:
-                with open("src/" + Your_PDF_Name, 'w') as fout:
+                with open(Your_PDF_Name, 'w') as fout:
                     fout.writelines(data[1:])
         
     r, Gr = PDF[:,0], PDF[:,1]
