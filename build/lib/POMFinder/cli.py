@@ -2,7 +2,7 @@ from sklearn.preprocessing import OrdinalEncoder
 import xgboost as xgb
 import numpy as np
 import matplotlib.pyplot as plt
-import argparse, h5py, os, re
+import argparse, h5py, os, re, pkg_resources
 
 _BANNER = """
 This is a package which takes a directory of PDF files
@@ -43,16 +43,20 @@ def main(args=None):
 
 
 def get_POMFinder():
+    # Get file paths
+    load_files = pkg_resources.resource_listdir(__name__, 'Backend/')
+    DataBase_path = pkg_resources.resource_filename(__name__, "Backend/"+load_files[0])
+    POMFinder_path = pkg_resources.resource_filename(__name__, "Backend/"+load_files[1])
     # Import the Database    
-    hf_name = h5py.File('src/Backend/POMFinder_443structures_100Dataset_per_Structure_xPDF_hypercube_sampling_Grmax_Name.h5', "r")
+    hf_name = h5py.File(DataBase_path, "r")
     y = hf_name.get('y')
     enc = OrdinalEncoder()
     y_onehotenc_cat = enc.fit(np.array(y))
     y_onehotenc_values = enc.fit_transform(np.array(y))
 
-    # Import XYZFinder
+    # Import POMFinder
     POMFinder = xgb.XGBClassifier()
-    POMFinder.load_model('src/Backend/XGBoost_443structures_100PDFperStructure_xPDF_hypercube_sampling_Grmax.model')
+    POMFinder.load_model(POMFinder_path)
     return y, y_onehotenc_cat, y_onehotenc_values, POMFinder
 
 
