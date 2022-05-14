@@ -100,7 +100,7 @@ def PDF_Preparation(Your_PDF_Name, Qmin, Qmax, Qdamp, rmax, nyquist, plot=True):
         plt.plot(PDF[:,0], PDF[:,1], label="Original Data")
         plt.plot(r, Gr[0,3:], label="Gr ready for ML")
         plt.legend()
-        plt.title("Original Data vs. transformed Data")
+        plt.title("Original Data vs. normalised Data")
         plt.xlabel("r (AA)")
         plt.ylabel("Gr")
         plt.show()
@@ -114,11 +114,11 @@ def POMPredicter(POMFinder, Gr, y_onehotenc_cat):
     #y_pred_proba = y_pred_proba[0];
     res = sorted(range(len(y_pred_proba)), key = lambda sub: y_pred_proba[sub]);
     res.reverse();
-    print ("The 1st guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[0]])[2:-2]+"cale.xyz", "with ", y_pred_proba[res[0]]*100, "% certaincy")
-    print ("The 2nd guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[1]])[2:-2]+"cale.xyz", "with ", y_pred_proba[res[1]]*100, "% certaincy")
-    print ("The 3rd guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[2]])[2:-2]+"cale.xyz", "with ", y_pred_proba[res[2]]*100, "% certaincy")
-    print ("The 4th guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[3]])[2:-2]+"cale.xyz", "with ", y_pred_proba[res[3]]*100, "% certaincy")
-    print ("The 5th guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[4]])[2:-2]+"cale.xyz", "with ", y_pred_proba[res[4]]*100, "% certaincy")
+    print ("The 1st guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[0]])[2:-2]+"cale.xyz")
+    print ("The 2nd guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[1]])[2:-2]+"cale.xyz")
+    print ("The 3rd guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[2]])[2:-2]+"cale.xyz")
+    print ("The 4th guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[3]])[2:-2]+"cale.xyz")
+    print ("The 5th guess from the model is: ", str(y_onehotenc_cat.categories_[0][res[4]])[2:-2]+"cale.xyz")
     
     return res, y_pred_proba
 
