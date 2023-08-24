@@ -1,3 +1,5 @@
+[ChemRxiv](https://chemrxiv.org/engage/chemrxiv/article-details/64e5fef7dd1a73847f5951b9)  |  [Paper]
+
 # POMFinder
 Welcome to POMFinder!
 This is a simple machine learning tool for structure characterisation of polyoxometalate clusters using total scattering Pair 
@@ -80,6 +82,7 @@ through email: __andy@chem.ku.dk__.
 # Cite
 If you use our code or our results, please consider citing our paper. Thanks in advance!
 ```
+https://chemrxiv.org/engage/chemrxiv/article-details/64e5fef7dd1a73847f5951b9
 ```
 
 # License
