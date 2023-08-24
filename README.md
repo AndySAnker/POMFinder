@@ -6,12 +6,16 @@ This is a simple machine learning tool for structure characterisation of polyoxo
 Distribution Function (PDF) analysis.  
 Simply provide a PDF and the model will output best best structural models from it structure catalog which contains 443 polyoxometalate clusters. 
 
-1. [Install](#install)
-2. [Usage](#usage)
-3. [Authors](#authors)
-4. [Cite](#cite)
-5. [License](#license)
+1. [App](#app)
+2. [Install](#install)
+3. [Usage](#usage)
+4. [Authors](#authors)
+5. [Cite](#cite)
+6. [License](#license)
 
+## App
+You can use POMFinder on a single PDF on the following HuggingFace App:
+https://huggingface.co/spaces/AndySAnker/POMFinder
 
 ## Install
 To install POMFindeer you will need to have [Python](https://www.python.org/downloads/) or 
