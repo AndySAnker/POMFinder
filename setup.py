@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='POMFinder',
-    version='0.0.1',
+    version='1.0.0',
     author='Andy S. Anker',
     author_email='andy@chem.ku.dk',
     url='https://github.com/AndySAnker/POMFinder',
