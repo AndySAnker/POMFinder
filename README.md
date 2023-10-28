@@ -19,13 +19,13 @@ https://huggingface.co/spaces/AndySAnker/POMFinder
 
 ## Install
 To install POMFindeer you will need to have [Python](https://www.python.org/downloads/) or 
-[Anaconda](https://www.anaconda.com/products/individual) installed. I recommend running POMFinder on Python version
-3.7 or higher. If you have installed Anaconda you can create a new environment and activate it. 
+[Anaconda](https://www.anaconda.com/products/individual) installed. We recommend running POMFinder on Python version
+3.7. If you have installed Anaconda you can create a new environment and activate it. 
 ```
 conda create --name POMFinder_env python=3.7
 conda activate POMFinder_env
 ```
-Now you are ready to install what you actually come for! Currently __POMFinder__ is not avaible through PyPI or conda so the
+Now you are ready to install what you actually come for! Currently __POMFinder__ is not available through PyPI or conda so the
 package needs to be downloaded manually
 Run the following command to install the __POMFindeer__ package.  
 ```
@@ -34,7 +34,7 @@ or
 python setup.py install
 ```
 
-To verify that __POMFinder__ have been installed properly try calling the help argument.
+To verify that __POMFinder__ has been installed properly, try calling the help argument.
 ```
 POMFinder --help
 
@@ -42,14 +42,13 @@ POMFinder --help
 >>> 
 >>> This is a package which takes a directory of PDF files 
 >>> or a specific PDF file. It then determines the best structural 
->>> candidates based of a polyoxometalate catalog. Results can
+>>> candidates based on a polyoxometalate catalog. Results can
 >>> be fitted to the PDF. 
 ```  
-This should output a list of possible arguments for running __POMFinder__ and indicates that it could find the package! 
+This should output a list of possible arguments for running __POMFinder__ and indicate that it could find the package! 
 
 ## Usage
-Now that __POMFinder__ is installed and ready to use, lets discuss the possible arguments. The arguments are described in 
-greater detail at the end of this section.
+Now that __POMFinder__ is installed and ready to use, let's discuss the possible arguments.
 
 | Arg | Description | Default |  
 | --- | --- |  --- |  
@@ -73,6 +72,9 @@ POMFinder --data "Experimental_Data/DanMAX_AlphaKeggin.gr" --nyquist "no" --Qmin
 >>> The 5th guess from the model is:  icsd_172542_0_1.1rscale.xyz
 
 ```  
+
+**OBS:** As demonstrated in section E of the supplementary information, the Qmin, Qmax, and Qdamp values have only a minor impact on the prediction and can thus be omitted.
+
 # Authors
 __Andy S. Anker__<sup>1</sup>   
 __Emil T. S. Kjær__<sup>1</sup>  
