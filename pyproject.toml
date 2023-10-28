@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "example_package_AndySAnker"
-version = "0.0.1"
+name = "POMFinder"
+version = "1.0.0"
 authors = [
   { name="AndySAnker", email="ankerandy@gmail.com" },
 ]
