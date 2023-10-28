@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setup(
     name='POMFinder',
-    version='1.0.1',
+    version='0.0.1',
     author='Andy S. Anker',
     author_email='andy@chem.ku.dk',
-    url='https://github.com/AndyNano/POMFinder',
+    url='https://github.com/AndySAnker/POMFinder',
     description='Finds POM clusters from PDF data!',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -17,15 +17,13 @@ setup(
     package_dir={'POMFinder': 'src'},
     package_data={'POMFinder': ['Backend/*.model', 'Backend/*.h5', 'COD_ICSD_XYZs_POMs_unique99/*.xyz', 'Experimental_Data/*.gr']},
 
-    entry_points={'console_scripts': [
+    entry_points = {'console_scripts': [
         'POMFinder=POMFinder.cli:main',
     ],
     },
-    classifiers=[
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Operating System :: OS Independent',
+    classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
     ],
     include_package_data = True,
     zip_safe=False,
