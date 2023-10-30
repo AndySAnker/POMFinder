@@ -18,21 +18,11 @@ You can use POMFinder on a single PDF on the following HuggingFace App:
 https://huggingface.co/spaces/AndySAnker/POMFinder
 
 ## Install
-To install POMFindeer you will need to have [Python](https://www.python.org/downloads/) or 
-[Anaconda](https://www.anaconda.com/products/individual) installed. We recommend running POMFinder on Python version
-3.7. If you have installed Anaconda you can create a new environment and activate it. 
+Install POMFinder with PyPi:
 ```
-conda create --name POMFinder_env python=3.7
-conda activate POMFinder_env
+pip install POMFinder==1.0.0
 ```
-Now you are ready to install what you actually come for! Currently __POMFinder__ is not available through PyPI or conda so the
-package needs to be downloaded manually
-Run the following command to install the __POMFindeer__ package.  
-```
-pip install .
-or
-python setup.py install
-```
+More details about which Python versions are supported etc. can be found at https://pypi.org/project/POMFinder/1.0.0/.
 
 To verify that __POMFinder__ has been installed properly, try calling the help argument.
 ```
