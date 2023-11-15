@@ -20,9 +20,9 @@ https://huggingface.co/spaces/AndySAnker/POMFinder
 ## Install
 Install POMFinder with PyPi:
 ```
-pip install POMFinder==1.0.1
+pip install POMFinder==1.0.2
 ```
-More details about which Python versions are supported etc. can be found at https://pypi.org/project/POMFinder/1.0.1/.
+More details about which Python versions are supported etc. can be found at https://pypi.org/project/POMFinder/1.0.2/.
 
 To verify that __POMFinder__ has been installed properly, try calling the help argument.
 ```
