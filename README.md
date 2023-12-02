@@ -73,7 +73,7 @@ __Kirsten M. Ø. Jensen__<sup>1</sup>
 <sup>1</sup> Department of Chemistry and Nano-Science Center, University of Copenhagen, 2100 Copenhagen Ø, Denmark.   
 
 Should there be any question, desired improvement or bugs please contact us on GitHub or 
-through email: __andy@chem.ku.dk__.
+through email: __ansoan@dtu.dk__.
 
 # Cite
 If you use our code or our results, please consider citing our paper. Thanks in advance!
